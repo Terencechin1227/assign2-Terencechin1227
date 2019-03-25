@@ -41,6 +41,7 @@ float y;
 
 void setup() {
 	size(640, 480, P2D);
+  frameRate(15);
 	
   soldierY=80*floor(random(2,6)); //soldier
   cabbageX=80*floor(random(0,8)); //cabbage
@@ -258,13 +259,35 @@ void keyPressed(){
  if (key == CODED) {
     switch (keyCode) {
       case DOWN:
+      image(groundhogDown,x,y);
         y += 80;
         break;
       case LEFT:
+      image(groundhogLeft,x,y);
         x -= 80;
         break;
       case RIGHT:
+      image(groundhogRight,x,y);
         x += 80;
+        break;
+    }
+  } 
+}
+
+void keyReleased() {
+  if (key == CODED) {
+    switch (keyCode) {
+      case UP:
+        upPressed = false;
+        break;
+      case DOWN:
+        downPressed = false;
+        break;
+      case LEFT:
+        leftPressed = false;
+        break;
+      case RIGHT:
+        rightPressed = false;
         break;
     }
   }
