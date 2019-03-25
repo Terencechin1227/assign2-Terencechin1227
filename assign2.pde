@@ -271,24 +271,8 @@ void keyPressed(){
         x += 80;
         break;
     }
-  } 
-}
-
-void keyReleased() {
-  if (key == CODED) {
-    switch (keyCode) {
-      case UP:
-        upPressed = false;
-        break;
-      case DOWN:
-        downPressed = false;
-        break;
-      case LEFT:
-        leftPressed = false;
-        break;
-      case RIGHT:
-        rightPressed = false;
-        break;
-    }
+  }else{
+  image(groundhogIdle,x,y);
   }
+  
 }
