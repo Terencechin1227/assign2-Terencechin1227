@@ -172,6 +172,8 @@ void draw() {
           image(life2,80,life2Y);
            life2Y=10;
            soldierY=80*floor(random(2,6));
+           cabbageX=80*floor(random(0,8)); 
+           cabbageY=80*floor(random(2,6));
          gameState = GAME_OVER;
        }
        if(x==cabbageX && y==cabbageY){
@@ -231,6 +233,8 @@ void draw() {
             image(life2,80,life2Y);
             life2Y=10;
             soldierY=80*floor(random(2,6));
+            cabbageX=80*floor(random(0,8)); 
+            cabbageY=80*floor(random(2,6));
           gameState = GAME_OVER;
          }
           break;
