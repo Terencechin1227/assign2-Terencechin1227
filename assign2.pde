@@ -104,7 +104,7 @@ void draw() {
     if(x>560){x=560;}
     if(y>400){y=400;}
     image(soldier,soldierX-80,soldierY); //soldier animation
-    soldierX = (soldierX + 1) % 720;
+    soldierX = (soldierX + 4) % 720;
     image(cabbage,cabbageX,cabbageY);//cabbage
     
     if(x==cabbageX && y==cabbageY){
@@ -137,7 +137,7 @@ void draw() {
       if(x>560){x=560;}
       if(y>400){y=400;}
       image(soldier,soldierX-80,soldierY); //soldier animation
-      soldierX = (soldierX + 1) % 720;     
+      soldierX = (soldierX + 4) % 720;     
       
        if(x<soldierX && x+80>soldierX-80 && y<soldierY+80 && y+80>soldierY){
          life3Y=500;
@@ -164,7 +164,7 @@ void draw() {
       if(x>560){x=560;}
       if(y>400){y=400;}
       image(soldier,soldierX-80,soldierY); //soldier animation
-      soldierX = (soldierX + 1) % 720;    
+      soldierX = (soldierX + 4) % 720;    
       image(cabbage,cabbageX,cabbageY);//cabbage
       
        if(x<soldierX && x+80>soldierX-80 && y<soldierY+80 && y+80>soldierY){
@@ -200,7 +200,7 @@ void draw() {
       if(x>560){x=560;}
       if(y>400){y=400;}
       image(soldier,soldierX-80,soldierY); //soldier animation
-      soldierX = (soldierX + 1) % 720;     
+      soldierX = (soldierX + 4) % 720;     
       
        if(x<soldierX && x+80>soldierX-80 && y<soldierY+80 && y+80>soldierY){
          life2Y=life2Y-490;
@@ -226,7 +226,7 @@ void draw() {
         if(x>560){x=560;}
         if(y>400){y=400;}
         image(soldier,soldierX-80,soldierY); //soldier animation
-        soldierX = (soldierX + 1) % 720;     
+        soldierX = (soldierX + 4) % 720;     
         
          if(x<soldierX && x+80>soldierX-80 && y<soldierY+80 && y+80>soldierY){
             x=320;
