@@ -31,7 +31,6 @@ final int GAME_LIFE2= 4;
 final int GAME_LIFE1= 5;
 final int GAME_OVER = 6;
 
-boolean upPressed = false;
 boolean downPressed = false;
 boolean leftPressed = false;
 boolean rightPressed = false;
@@ -280,10 +279,6 @@ void keyPressed(){
 void keyReleased() {
   if (key == CODED) {
     switch (keyCode) {
-      case UP:
-        upPressed = false;
-        image(groundhogIdle,x,y);
-        break;
       case DOWN:
         downPressed = false;
         image(groundhogIdle,x,y);
