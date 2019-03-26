@@ -273,6 +273,8 @@ void keyPressed(){
         x += 80;
         break;
     }
+  }else{
+  image(groundhogIdle,x,y);
   }
 }
 
@@ -281,15 +283,12 @@ void keyReleased() {
     switch (keyCode) {
       case DOWN:
         downPressed = false;
-        image(groundhogIdle,x,y);
         break;
       case LEFT:
         leftPressed = false;
-        image(groundhogIdle,x,y);
         break;
       case RIGHT:
         rightPressed = false;
-        image(groundhogIdle,x,y);
         break;
     }
   }
