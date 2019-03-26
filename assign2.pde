@@ -260,19 +260,42 @@ void keyPressed(){
     switch (keyCode) {
       case DOWN:
       image(groundhogDown,x,y);
+      downPressed = true;
         y += 80;
         break;
       case LEFT:
       image(groundhogLeft,x,y);
+      leftPressed = true;
         x -= 80;
         break;
       case RIGHT:
       image(groundhogRight,x,y);
+      rightPressed = true;
         x += 80;
         break;
     }
-  }else{
-  image(groundhogIdle,x,y);
   }
-  
+}
+
+void keyReleased() {
+  if (key == CODED) {
+    switch (keyCode) {
+      case UP:
+        upPressed = false;
+        image(groundhogIdle,x,y);
+        break;
+      case DOWN:
+        downPressed = false;
+        image(groundhogIdle,x,y);
+        break;
+      case LEFT:
+        leftPressed = false;
+        image(groundhogIdle,x,y);
+        break;
+      case RIGHT:
+        rightPressed = false;
+        image(groundhogIdle,x,y);
+        break;
+    }
+  }
 }
