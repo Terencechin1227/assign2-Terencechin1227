@@ -40,7 +40,6 @@ float y;
 
 void setup() {
 	size(640, 480, P2D);
-  frameRate(15);
 	
   soldierY=80*floor(random(2,6)); //soldier
   cabbageX=80*floor(random(0,8)); //cabbage
@@ -72,7 +71,7 @@ void setup() {
 }
 
 void draw() {
-  
+  frameRate(15);
    switch (gameState){
     case GAME_START:     //GAME_START
       background(title);
@@ -106,6 +105,16 @@ void draw() {
     soldierX = (soldierX + 4) % 720;
     image(cabbage,cabbageX,cabbageY);//cabbage
     
+    if(downPressed){
+        image(groundhogDown,x,y);
+      }
+      if(leftPressed){
+        image(groundhogLeft,x,y);
+      }
+      if(rightPressed){
+        image(groundhogRight,x,y);
+      }
+    
     if(x==cabbageX && y==cabbageY){
       life3Y=10;
       gameState = GAME_LIFE3;
@@ -136,7 +145,16 @@ void draw() {
       if(x>560){x=560;}
       if(y>400){y=400;}
       image(soldier,soldierX-80,soldierY); //soldier animation
-      soldierX = (soldierX + 4) % 720;     
+      soldierX = (soldierX + 4) % 720;  
+      if(downPressed){
+        image(groundhogDown,x,y);
+      }
+      if(leftPressed){
+        image(groundhogLeft,x,y);
+      }
+      if(rightPressed){
+        image(groundhogRight,x,y);
+      }
       
        if(x<soldierX && x+80>soldierX-80 && y<soldierY+80 && y+80>soldierY){
          life3Y=500;
@@ -165,6 +183,15 @@ void draw() {
       image(soldier,soldierX-80,soldierY); //soldier animation
       soldierX = (soldierX + 4) % 720;    
       image(cabbage,cabbageX,cabbageY);//cabbage
+      if(downPressed){
+        image(groundhogDown,x,y);
+      }
+      if(leftPressed){
+        image(groundhogLeft,x,y);
+      }
+      if(rightPressed){
+        image(groundhogRight,x,y);
+      }
       
        if(x<soldierX && x+80>soldierX-80 && y<soldierY+80 && y+80>soldierY){
           x=320;
@@ -199,7 +226,16 @@ void draw() {
       if(x>560){x=560;}
       if(y>400){y=400;}
       image(soldier,soldierX-80,soldierY); //soldier animation
-      soldierX = (soldierX + 4) % 720;     
+      soldierX = (soldierX + 4) % 720; 
+      if(downPressed){
+        image(groundhogDown,x,y);
+      }
+      if(leftPressed){
+        image(groundhogLeft,x,y);
+      }
+      if(rightPressed){
+        image(groundhogRight,x,y);
+      }
       
        if(x<soldierX && x+80>soldierX-80 && y<soldierY+80 && y+80>soldierY){
          life2Y=life2Y-490;
@@ -225,8 +261,16 @@ void draw() {
         if(x>560){x=560;}
         if(y>400){y=400;}
         image(soldier,soldierX-80,soldierY); //soldier animation
-        soldierX = (soldierX + 4) % 720;     
-        
+        soldierX = (soldierX + 4) % 720;  
+        if(downPressed){
+        image(groundhogDown,x,y);
+      }
+      if(leftPressed){
+        image(groundhogLeft,x,y);
+      }
+      if(rightPressed){
+        image(groundhogRight,x,y);
+      }
          if(x<soldierX && x+80>soldierX-80 && y<soldierY+80 && y+80>soldierY){
             x=320;
             y=80;
@@ -258,17 +302,14 @@ void keyPressed(){
  if (key == CODED) {
     switch (keyCode) {
       case DOWN:
-      image(groundhogDown,x,y);
       downPressed = true;
         y += 80;
         break;
       case LEFT:
-      image(groundhogLeft,x,y);
       leftPressed = true;
         x -= 80;
         break;
       case RIGHT:
-      image(groundhogRight,x,y);
       rightPressed = true;
         x += 80;
         break;
