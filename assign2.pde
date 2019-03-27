@@ -75,7 +75,6 @@ void setup() {
 }
 
 void draw() {
-  frameRate(15);
    switch (gameState){
     case GAME_START:     //GAME_START
       background(title);
