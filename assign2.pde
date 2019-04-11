@@ -482,6 +482,8 @@ void draw() {
           if (mouseY > 360 && mouseY < 420 && mouseX > 248 && mouseX < 392){
           image(restartHovered,248,360);
           if (mousePressed){
+            x=320;//groundhog
+            y=80;
             soldierY=80*floor(random(2,6));
             cabbageX = 80*floor(random(0,8));
             cabbageY = 80*floor(random(2,6));
